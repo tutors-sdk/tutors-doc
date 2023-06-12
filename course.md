@@ -1,3 +1,3 @@
 # Tutors Documentation Set
 
-A collections of labs and presentations on Tutors
+A collections of labs and presentations on Tutors.
