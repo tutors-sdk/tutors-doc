@@ -41,7 +41,31 @@ order: 1
 ---
 ```
 
+This approach can be combined with icons for all learning resources except labs
 
+
+```
+---
+order: 1
+icon:
+  type: heroicons-outline:book-open
+  color: red
+---   
+```
+
+Known Problem/Workaround:
+
+For now, to order the labs use this approach in the 00 step of the lab
+
+```
+---
+icon:
+  type: heroicons-outline:book-open
+  color: red
+---  
+order: 1
+---   
+```
 
 ###c) File Names
 
