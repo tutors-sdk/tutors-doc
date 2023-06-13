@@ -156,7 +156,7 @@ The second two digits are the **'short title'**
 
 The first line in the actual md file is taken as the **'long title'**. This is displayed in the sidebar
 
-### Lab Titles & Names
+### 2.3 Lab Titles & Names
 
 For more details on Lab file names and titles and how they control the output displayed in breadcrumbs and on lab pages see [Labs II](https://reader.tutors.dev/lab/tutors-docs/unit-3-edit/book-d-labs/Lab%20Names)
 
