@@ -5,9 +5,9 @@ order:4
 
 #Tutors CheatSheet v1.01
 
-[toc]
-
 ##Learning Resources
+
+[toc]
 
 ###a) Card Images
 
