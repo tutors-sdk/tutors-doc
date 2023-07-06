@@ -73,7 +73,15 @@ Each resource much have the following files:
 - some-resource-name.md
 - some-resource-name.png
 
+The name chosen for the markdown file must be also used for the .png. These provide essential information to populate a tutors card. For example this card:
 
+![](img/card-1.png)
+
+Images
+
+- <https://nodeca.github.io/pica/demo>
+
+  
 
 ##Learning Resources
 
