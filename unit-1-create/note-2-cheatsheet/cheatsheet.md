@@ -1,8 +1,11 @@
 ---
 order:4
 ---
+Tutors CheatSheet v2.0
 
-# Tutors CheatSheet v2.0
+Tutors quick reference
+
+[toc]
 
 ## Semantic Naming & Ordering
 
