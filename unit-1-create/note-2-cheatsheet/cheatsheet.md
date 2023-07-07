@@ -43,6 +43,48 @@ To sort folders, use numerals to achieve alphabetic sorting:
 - topic-02-learning-html
 - topic-03-learning-css
 
+## Course Structure
+
+The minimum requirements for a course are a folder containing these three files:
+
+- course.md
+- course.png
+- properies.yaml
+
+### course.md
+
+A markdown file, structured as follows:
+
+~~~markdown
+Course Title
+
+Course information - a course outline, description or any other information. Can be any length. Will appear as slide over if the user presser the Info button on the top left.
+~~~
+
+### course.png
+
+An image that will be used in the course title bar
+
+### properties.yaml
+
+Course metadata in yaml format. At a minimum, this must contain the following:
+
+~~~yaml
+credits: The course author(s) or organisation
+~~~
+
+The credits property will appear as a subtitle in the course title bar.
+
+There are a range of other optional properties. See the end of this document for a complete list.
+
+### Folder Structure
+
+ A course typically consists of a series of topic folders, named to sort alphabetically: 
+
+- ![](img/course-layout.png)
+
+Each topic folder 
+
 ## Learning Resources
 
 ### Types
@@ -76,6 +118,28 @@ Each resource much have the following files:
 The name chosen for the markdown file must be also used for the .png. These provide essential information to populate a tutors card. For example this card:
 
 ![](img/card-1.png)
+
+would require these two files:
+
+#### introduction.md
+
+~~~markdown
+Lecture 1
+
+A short summary of the talk, no more than two sentences.
+~~~
+
+#### introduction.png
+
+![](img/introduction.png)
+
+
+
+## Talk
+
+A talk is a PDF presentation, document or other pdf based resource. 
+
+
 
 Images
 
