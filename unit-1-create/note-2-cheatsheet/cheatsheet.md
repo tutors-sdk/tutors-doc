@@ -7,7 +7,7 @@ Tutors quick reference
 
 [toc]
 
-## Semantic Naming & Ordering
+## Course Folders
 
 Folders starting with the following names have a significance in Tutors:
 
@@ -42,14 +42,6 @@ For all file & folder names, avoid spaces within a file name. So instead of:
 ...use:
 
 - topic-introduction
-
-To sort folders, use numerals to achieve alphabetic sorting:
-
-| Folder Name |
-| ----------- |
-| topic-01-introduction  |  
-| topic-02-learning-html |  
-| topic-03-learning-css  |  
 
 
 ## Course Structure
@@ -88,11 +80,35 @@ There are a range of other optional properties. See the end of this document for
 
 ### Folder Structure
 
- A course typically consists of a series of topic folders, named to sort alphabetically: 
+A course typically consists of a series of topic folders, named to sort alphabetically: 
 
-- ![](img/course-layout.png)
+| Folder Name            |
+| ---------------------- |
+| topic-01-introduction  |
+| topic-02-learning-html |
+| topic-03-learning-css  |
 
-Each topic folder 
+## Topic
+
+A topic will appear on the course page as a card:
+
+![](img/topic.png)
+
+The title, subtitle and image are drawn from 2 files:
+
+### topic.md
+
+~~~~markdown
+# Simple
+
+Units with presentations, labs + resources
+~~~~
+
+### topic.png
+
+![](img/topic-image.png)
+
+
 
 ## Learning Resources
 
@@ -117,7 +133,7 @@ Each learning resource is contained within a folder, whose name starts with the 
 
 The numerals imply alphabetic sorting of these 2 learning resources.
 
-### Structure
+### File Structure
 
 Each resource much have the following files:
 
