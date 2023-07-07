@@ -94,6 +94,10 @@ A topic will appear on the course page as a card:
 
 ![](img/topic.png)
 
+A typical folder may be laid out like this:
+
+![](img/topic-folder.png)
+
 The title, subtitle and image are drawn from 2 files:
 
 ### topic.md
@@ -108,7 +112,23 @@ Units with presentations, labs + resources
 
 ![](img/topic-image.png)
 
+## Unit
 
+A unit will encapsulate learning resources, framed by a title:
+
+![](img/unit.png)
+
+The above unit is laid out as follows:
+
+![](img/unit-folder.png)
+
+Three learning objects (discussed below) + another topic.md file, which contains the unit title:
+
+### topic.md
+
+~~~markdown
+Main Lesson
+~~~
 
 ## Learning Resources
 
@@ -116,15 +136,17 @@ Units with presentations, labs + resources
 
 Tutors supports nine types learning resources: 
 
-- archive
-- book
-- github
-- note
-- panelvideo
-- paneltalk
-- panelnote
-- talk
-- web
+| Type | Description  |
+| ----------- | ------------------------------------------------------ |
+| talk        | Standard presentation in pdf format                    |
+| web         | Link to an external web site                           |
+| note        | Single web page, authored in markdown                  |
+| book        | Step by step lab instructions, authored in markdown    |
+| panelvideo  | A full screen width video, hosted in YouTube or HEANet |
+| paneltalk   | Full screen width  presentation in pdf format          |
+| panelnote   | Full screen width note                                 |
+| github      | Link to a GitHub repository                            |
+| archive     | Downloadable zip file of resources                     |
 
 Each learning resource is contained within a folder, whose name starts with the name above, and may continue with additional sorting & semantic information. Eg:
 
@@ -159,15 +181,35 @@ A short summary of the talk, no more than two sentences.
 ![](img/introduction.png)
 
 
+## Talk: Standard presentation in pdf format 
 
-## Talk
+A talk is a PDF presentation, document or other pdf formatted resource. 
 
-A talk is a PDF presentation, document or other pdf based resource. 
+## web : Link to an external web site 
 
+## note : Single web page, authored in markdown 
 
+## book : Step by step lab instructions, authored in markdown
+
+## panelvideo : A full screen width video, hosted in YouTube or HEANet 
+
+## paneltalk : Full screen width  presentation in pdf format 
+
+## panelnote : Full screen width note 
+
+## github : Link to a GitHub repository 
+
+## archive : Downloadable zip file of resources 
+
+## properties.yaml
+
+## calendar.yaml
+
+## enrollment.yaml
 
 ## Image resizing
 
 - <https://nodeca.github.io/pica/demo>
 
+## Markdown Guides
   
