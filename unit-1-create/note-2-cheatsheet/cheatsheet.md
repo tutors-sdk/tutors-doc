@@ -185,9 +185,37 @@ A short summary of the talk, no more than two sentences.
 
 ## Talk 
 
-A talk is a PDF presentation, document or other pdf formatted resource. 
+A talk is a PDF presentation, document or other pdf formatted resource. The pdf file, markdown description and image file must all have the same file name, which can be whatever you choose. For example:
+
+![](img/talk.png)
+
+The .md file provides the card title + subtitle:
+
+#### introduction.md
+
+~~~markdown
+Lecture 1
+
+A short summary of the talk, no more than two sentences.
+~~~
+
+These will populate the card:
+
+![](img/card-1.png)
+
+... which will include the .png image provide
+
+Selecting the card will open the pdf in a reader, with an accompanying context panel on the right - called the Topic Navigator:
+
+![](img/talk-pdf.png)
+
+Slide next/prev + rotate, download and full screen buttons are included in the title bar.
+
+- [Talk Example](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/talk-1-intro)
 
 ## Web 
+
+
 
 ## Note 
 
@@ -203,15 +231,22 @@ A talk is a PDF presentation, document or other pdf formatted resource.
 
 ## Archive  
 
+## Ordering Learning Resources
+
+## Using SVG Icons
+
 ## Properties.yaml
 
 ## Calendar.yaml
 
 ## Enrollment.yaml
 
+## Makrdown Guides
+
 ## Image resizing
 
 - <https://nodeca.github.io/pica/demo>
 
-## Markdown Guides
+## Reference Course
+
   
