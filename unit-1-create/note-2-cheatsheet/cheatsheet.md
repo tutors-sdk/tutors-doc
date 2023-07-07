@@ -28,7 +28,7 @@ Folders starting with the following names have a significance in Tutors:
 
 The following filenames are significant:
 
-| File namr | Description |
+| File name | Description |
 | ----------- | ----------- |
 | weburl      |  link to external web site  |
 | videoid      |  id of  external video  |
@@ -48,9 +48,11 @@ For all file & folder names, avoid spaces within a file name. So instead of:
 
 The minimum requirements for a course are a folder containing these three files:
 
-- course.md
-- course.png
-- properies.yaml
+| File name | 
+| ----------- | 
+| course.md      |  
+| course.png     | 
+| properies.yaml   |  
 
 ### course.md
 
@@ -181,31 +183,31 @@ A short summary of the talk, no more than two sentences.
 ![](img/introduction.png)
 
 
-## Talk: Standard presentation in pdf format 
+## Talk 
 
 A talk is a PDF presentation, document or other pdf formatted resource. 
 
-## web : Link to an external web site 
+## Web 
 
-## note : Single web page, authored in markdown 
+## Note 
 
-## book : Step by step lab instructions, authored in markdown
+## Book 
 
-## panelvideo : A full screen width video, hosted in YouTube or HEANet 
+## Panelvideo 
 
-## paneltalk : Full screen width  presentation in pdf format 
+## Paneltalk 
 
-## panelnote : Full screen width note 
+## Panelnote 
 
-## github : Link to a GitHub repository 
+## Github 
 
-## archive : Downloadable zip file of resources 
+## Archive  
 
-## properties.yaml
+## Properties.yaml
 
-## calendar.yaml
+## Calendar.yaml
 
-## enrollment.yaml
+## Enrollment.yaml
 
 ## Image resizing
 
