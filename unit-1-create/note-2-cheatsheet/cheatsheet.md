@@ -11,28 +11,30 @@ Tutors quick reference
 
 Folders starting with the following names have a significance in Tutors:
 
-| Folder Name | Description |
-| ----------- | ----------- |
-| topic       |  Top level course topic  |
-| unit        |  Group of learning objects within a topic           |
-| side    |  Group of learning objects framed in a sidebar  |
-| archive     | Downloadable zip file of resources |
-| book        | Step by step lab instructions, authored in markdown |
-| github      | Link to a GitHub repository |
-| note        | Single web page, authored in markdown |
-| panelvideo  | A full screen width video, hosted in YouTube or HEANet |
-| paneltalk   | Full screen width  presentation in pdf format |
-| panelnote   | Full screen width note |
-| talk        | Standard presentation in pdf format |
-| web         | Link to an external web site |
+| Folder Name | Description                                            | Example | Source
+| ----------- | ------------------------------------------------------ | ------  |------  |
+| topic       | Top level course topic                                 | [link](https://reader.tutors.dev/topic/reference-course/topic-01-typical)| [link](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical)|
+| unit        | Group of learning objects within a topic               | [link](https://reader.tutors.dev/topic/reference-course/topic-01-typical)| [link](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1)|
+| side        | Group of learning objects framed in a sidebar          | [link](https://reader.tutors.dev/topic/reference-course/topic-02-side)                  | [link](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-02-side/side-unit)|
+| archive     | Downloadable zip file of resources                     | [link](https://reader.tutors.dev/wall/archive/reference-course)| [link](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-07-reference/archive)|
+| book        | Step by step lab instructions, authored in markdown    | [link](https://reader.tutors.dev/lab/reference-course/topic-01-typical/unit-1/book-a)| [link](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/book-a)|
+| github      | Link to a GitHub repository                            | [link](https://reader.tutors.dev/wall/github/reference-course)| [link](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical)|
+| note        | Single web page, authored in markdown                  | [link](https://reader.tutors.dev/note/reference-course/topic-01-typical/unit-2/note-1)| [link](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/note-1)|
+| panelvideo  | A full screen width video, hosted in YouTube or HEANet | [link](https://reader.tutors.dev/topic/reference-course/topic-03-media)| [link](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-03-media/panelvideo-1)|
+| paneltalk   | Full screen width  presentation in pdf format          | [link](https://reader.tutors.dev/topic/reference-course/topic-05-panel-talk)| [link](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-05-panel-talk/paneltalk)|
+| panelnote   | Full screen width note                                 | [link](https://reader.tutors.dev/topic/reference-course/topic-04-panel-note)| [link](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-04-panel-note/panelnote)|
+| talk        | Standard presentation in pdf format                    | [link](https://reader.tutors.dev/talk/reference-course/topic-01-typical/unit-1/talk-1-intro)| [link](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/talk-1-intro)|
+| web         | Link to an external web site                           | [link](https://reader.tutors.dev/wall/web/reference-course.netlify.app)| [link](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/web-1)|
 
 The following filenames are significant:
 
 | File name | Description |
 | ----------- | ----------- |
+| topic.md    |  title + subtitle for a topic or a unit  |
+| topic.png   |  image for a topic  |
 | weburl      |  link to external web site  |
-| videoid      |  id of  external video  |
-| githubid     |  link to github repo  |
+| videoid     |  id of  external video  |
+| githubid    |  link to github repo  |
 
 
 For all file & folder names, avoid spaces within a file name. So instead of:
@@ -92,15 +94,11 @@ A course typically consists of a series of topic folders, named to sort alphabet
 
 ## Topic
 
-A topic will appear on the course page as a card:
-
-![](img/topic.png)
-
-A typical folder may be laid out like this:
+A topic folder may be laid out like this:
 
 ![](img/topic-folder.png)
 
-The title, subtitle and image are drawn from 2 files:
+The title and subtitle are extracted from the topic.md file, for example:
 
 ### topic.md
 
@@ -110,9 +108,7 @@ The title, subtitle and image are drawn from 2 files:
 Units with presentations, labs + resources
 ~~~~
 
-### topic.png
-
-![](img/topic-image.png)
+The image is contained in topic.png
 
 ## Unit
 
@@ -138,7 +134,7 @@ Main Lesson
 
 Tutors supports nine types learning resources: 
 
-| Type | Description  |
+| Type | Description  | 
 | ----------- | ------------------------------------------------------ |
 | talk        | Standard presentation in pdf format                    |
 | web         | Link to an external web site                           |
