@@ -205,12 +205,13 @@ Panels appear directly in a unit or topic, and are not represented by a separate
 | [Full screen width  presentation in pdf format    ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-05-panel-talk/paneltalk)    | [Main Talk](https://reader.tutors.dev/topic/reference-course/topic-05-panel-talk) | 
 | [Full screen width note](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-04-panel-note/panelnote)                               | [Main Note](https://reader.tutors.dev/topic/reference-course/topic-04-panel-note) | 
 
-
 ## Talk 
 
-| Example Resource                                             | Display                                                      | Cards                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+---
+
 | [Standard presentation in pdf format](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/talk-1-intro) | [Lecture 1](https://reader.tutors.dev/talk/reference-course/topic-01-typical/unit-1/talk-1-intro) | [Talks](https://reader.tutors.dev/wall/talk/reference-course) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+
 
 A talk is a PDF presentation, document or other pdf formatted resource. The pdf file, markdown description and image file must all have the same file name, which can be whatever you choose. 
 
@@ -229,12 +230,15 @@ A short summary of the talk, no more than two sentences.
 ~~~
 
 ## Note 
+
+---
+
 | [Example ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/note-1)                | [Display](https://reader.tutors.dev/note/reference-course/topic-01-typical/unit-2/note-1)          | [Cards](https://reader.tutors.dev/wall/note/reference-course) | 
 | ---------------- | ------- | ----- |
 
 A note is a full web page, authored in markdown using the basic syntax:
 
-- https://www.markdownguide.org/basic-syntax/
+- <https://www.markdownguide.org/basic-syntax/>
 
 If you choose to include images or links to zipped archives you wish to be distributed with the note, you must include these in the note folder:
 
@@ -248,6 +252,12 @@ Image links structure in include relative references to the image. E.g:
 
 ~~~markdown
 ![](img/01.png)
+~~~
+
+Similarity, if you wish to distributed a zipped archive of learning resources, include the zip file(s) in the archives folder, and link like this:
+
+~~~markdown
+[Solutions](./archives/archive.zip)
 ~~~
 
 
