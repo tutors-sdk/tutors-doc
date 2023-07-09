@@ -208,11 +208,11 @@ Panels appear directly in a unit or topic, and are not represented by a separate
 
 ## Talk 
 
-A talk is a PDF presentation, document or other pdf formatted resource. The pdf file, markdown description and image file must all have the same file name, which can be whatever you choose. 
-
 | Example Resource                                             | Display                                                      | Cards                                                        |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Standard presentation in pdf format](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/talk-1-intro) | [Lecture 1](https://reader.tutors.dev/talk/reference-course/topic-01-typical/unit-1/talk-1-intro) | [Talks](https://reader.tutors.dev/wall/talk/reference-course) |
+
+A talk is a PDF presentation, document or other pdf formatted resource. The pdf file, markdown description and image file must all have the same file name, which can be whatever you choose. 
 
 | File name        | Purpose                                                      |
 | ---------------- | ------------------------------------------------------------ |
@@ -228,21 +228,71 @@ Lecture 1
 A short summary of the talk, no more than two sentences.
 ~~~
 
-## Web 
-
 ## Note 
+| [Example ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/note-1)                | [Display](https://reader.tutors.dev/note/reference-course/topic-01-typical/unit-2/note-1)          | [Cards](https://reader.tutors.dev/wall/note/reference-course) | 
+| ---------------- | ------- | ----- |
+
+A note is a full web page, authored in markdown using the basic syntax:
+
+- https://www.markdownguide.org/basic-syntax/
+
+If you choose to include images or links to zipped archives you wish to be distributed with the note, you must include these in the note folder:
+
+| Resource  | Purpose                                                      |
+| --------- | ------------------------------------------------------------ |
+| note-1.md | The content of the note. Any suitable name, must be .md      |
+| img       | A folder containing Images used by the note                  |
+| archives  | A folder contains any zipped archives referred to in the note |
+
+Image links structure in include relative references to the image. E.g:
+
+~~~markdown
+![](img/01.png)
+~~~
+
+
 
 ## Book 
 
-## Panelvideo 
+| Example Resource | Display | Cards |
+| ---------------- | ------- | ----- |
+| [Step by step lab instructions, authored in markdown  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/book-a) | [Lab 1](https://reader.tutors.dev/lab/reference-course/topic-01-typical/unit-1/book-a)            | [Labs](https://reader.tutors.dev/wall/lab/reference-course) |
 
-## Paneltalk 
+## Web 
 
-## Panelnote 
+| Example Resource | Display | Cards |
+| ---------------- | ------- | ----- |
+| [Link to a web site  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/web-1)                                   | [Web Site](https://tutors.dev)                                                                    | [Web Links](https://reader.tutors.dev/web/talk/reference-course) |
+
+## Archive  
+
+| Example Resource | Display | Cards |
+| ---------------- | ------- | ----- |
+| [Downloadable zip file of resources  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-07-reference/archive)                      | [Archive 1](https://reader.tutors.dev/wall/archive/reference-course)                              | [Archives](https://reader.tutors.dev/archive/talk/reference-course) |
 
 ## Github 
 
-## Archive  
+| Example Resource | Display | Cards |
+| ---------------- | ------- | ----- |
+| [Link to a GitHub repository  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical)                                       | [Github Repo 1](https://github.com/tutors-sdk/tutors)                                             | [Repos](https://reader.tutors.dev/wall/repo/reference-course) | 
+
+## Panelvideo 
+
+| Example Resource | Display | 
+| ---------------- | ------- | 
+| [A full screen width video, hosted in YouTube or HEANet](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-03-media/panelvideo-1) | [Main Video](https://reader.tutors.dev/topic/reference-course/topic-03-media)     |
+
+## Paneltalk 
+
+| Example Resource | Display | 
+| ---------------- | ------- | 
+| [Full screen width  presentation in pdf format    ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-05-panel-talk/paneltalk)    | [Main Talk](https://reader.tutors.dev/topic/reference-course/topic-05-panel-talk) | 
+
+## Panelnote 
+
+| Example Resource | Display | 
+| ---------------- | ------- | 
+| [Full screen width note](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-04-panel-note/panelnote)                               | [Main Note](https://reader.tutors.dev/topic/reference-course/topic-04-panel-note) | 
 
 ## Ordering Learning Resources
 
