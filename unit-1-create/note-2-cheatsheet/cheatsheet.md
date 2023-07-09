@@ -6,9 +6,20 @@ order:4
 
 [toc]
 
-## Course Folders
+## Cards
 
-Folders starting with the following names have a significance in Tutors:
+The card metaphor is used throughout tutors as a simple, effective visual to represent a variety of learning resources. In general the contents of a card are extracted from the following:
+
+- A Markdown file, containing resource name + summary
+- An image, in png, jpg, gif or svg formats.
+
+These resources are typically named to match your context, and are contained in a folder whose name is structured to encode the type of learning resource.
+
+## Semantic Resource Names
+
+### Folders Names
+
+Folder names convey the type of learning resource, with the first letters determining its type. Folders starting with the following names have a significance in Tutors:
 
 |  Example                                                                                     | Source |
 | -------------------------------------------------------------------------------------------- | ------------------------------------------  |
@@ -25,24 +36,7 @@ Folders starting with the following names have a significance in Tutors:
 | [talk](https://reader.tutors.dev/talk/reference-course/topic-01-typical/unit-1/talk-1-intro) | [Standard presentation in pdf format  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/talk-1-intro)|
 | [web](https://reader.tutors.dev/wall/web/reference-course.netlify.app)                       | [ Link to an external web site  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/web-1)|
 
-The above table links to examples + the tutors course resource used to generate the example (the source).
-
-The following filenames are reserved:
-
-| File name       | Description |
-| --------------- | ----------- |
-| course.md       |  Title for course (mandatory)  |
-| properties.yaml |  Course properties (mandatory) |
-| course.png      |  Course image |
-| calendar.yaml   |  Course calendar |
-| enrolment.yaml  |  Student enrolment file|
-| weburl          |  link to external web site  |
-| videoid         |  id of  external video  |
-| githubid        |  link to github repo  |
-
-#### Folder Names
-
-Folder names convey the type of learning resourcee, with the first letters determining its type.  To sort the name alphabetically, append numberals. To enhance meaning, append contextual keywords: For example:
+ To sort the name alphabetically, append numerals. To enhance meaning, append contextual keywords: For example:
 
 | Folder Name            |
 | ---------------------- |
@@ -64,6 +58,19 @@ Each resource will typically have the following files:
 | ---------------------- | ------------------------------------------------------------ |
 | some-resource-name.md  | A markdown file, typically containing title + short summary for the resource |
 | some-resource-name.png | Image to he used for the resource. Name must be the same as the .md file, image can be .png, .jpg. .jpeg, .gif |
+
+The following filenames are reserved:
+
+| File name       | Description                   |
+| --------------- | ----------------------------- |
+| course.md       | Title for course (mandatory)  |
+| properties.yaml | Course properties (mandatory) |
+| course.png      | Course image                  |
+| calendar.yaml   | Course calendar               |
+| enrolment.yaml  | Student enrolment file        |
+| weburl          | link to external web site     |
+| videoid         | id of  external video         |
+| githubid        | link to github repo           |
 
 ## Course Structure
 
@@ -170,38 +177,50 @@ Side bar cam contain any number of learning resources.
 
 ### Types
 
-Tutors supports nine types learning resources: 
-| Example | Source  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [talk](https://reader.tutors.dev/talk/reference-course/topic-01-typical/unit-1/talk-1-intro) | [Standard presentation in pdf format  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/talk-1-intro) |
-| [note](https://reader.tutors.dev/note/reference-course/topic-01-typical/unit-2/note-1) | [Single web page, authored in markdown ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/note-1) |
-| [book](https://reader.tutors.dev/lab/reference-course/topic-01-typical/unit-1/book-a) | [Step by step lab instructions, authored in markdown  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/book-a) |
-| [panelvideo](https://reader.tutors.dev/topic/reference-course/topic-03-media) | [A full screen width video, hosted in YouTube or HEANet](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-03-media/panelvideo-1) |
-| [paneltalk](https://reader.tutors.dev/topic/reference-course/topic-05-panel-talk) | [Full screen width  presentation in pdf format    ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-05-panel-talk/paneltalk) |
-| [panelnote](https://reader.tutors.dev/topic/reference-course/topic-04-panel-note) | [ Full screen width note](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-04-panel-note/panelnote) |
-| [web](https://reader.tutors.dev/wall/web/reference-course.netlify.app) | [ Link to an external web site  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/web-1) |
-| [archive](https://reader.tutors.dev/wall/archive/reference-course) | [Downloadable zip file of resources  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-07-reference/archive) |
-| [github](https://reader.tutors.dev/wall/github/reference-course) | [Link to a GitHub repository  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical) |
+There are 2 broad types of learning resources
 
-Each learning resource is contained within a folder, whose name starts with the name above, and may continue with additional sorting & semantic information. Eg:
+- Card Resources
+- Panel Resources
 
-- talk-1-intro
-- talk-2-explore
+### Card Resources
 
-The numerals imply alphabetic sorting of these 2 learning resources.
+These resources are represented by simple cards that can appear in a topic unit:
 
-would require these two files:
+| Example Resource | Display | Cards |
+| ---------------- | ------- | ----- |
+| [Standard presentation in pdf format](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/talk-1-intro)             | [Lecture 1](https://reader.tutors.dev/talk/reference-course/topic-01-typical/unit-1/talk-1-intro) | [Talks](https://reader.tutors.dev/wall/talk/reference-course) |
+| [Single web page, authored in markdown ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/note-1)                | [Note 1](https://reader.tutors.dev/note/reference-course/topic-01-typical/unit-2/note-1)          | [Notes](https://reader.tutors.dev/wall/note/reference-course) | 
+| [Step by step lab instructions, authored in markdown  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/book-a) | [Lab 1](https://reader.tutors.dev/lab/reference-course/topic-01-typical/unit-1/book-a)            | [Labs](https://reader.tutors.dev/wall/lab/reference-course) |
+| [Link to a web site  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/web-1)                                   | [Web Site](https://tutors.dev)                                                                    | [Web Links](https://reader.tutors.dev/web/talk/reference-course) |
+| [Downloadable zip file of resources  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-07-reference/archive)                      | [Archive 1](https://reader.tutors.dev/wall/archive/reference-course)                              | [Archives](https://reader.tutors.dev/archive/talk/reference-course) |
+| [Link to a GitHub repository  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical)                                       | [Github Repo 1](https://github.com/tutors-sdk/tutors)                                             | [Repos](https://reader.tutors.dev/wall/repo/reference-course) | 
+
+### Panel Resources
+
+Panels appear directly in a unit or topic, and are not represented by a separate card
+
+| Example Resource | Display | 
+| ---------------- | ------- | 
+| [A full screen width video, hosted in YouTube or HEANet](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-03-media/panelvideo-1) | [Main Video](https://reader.tutors.dev/topic/reference-course/topic-03-media)     |
+| [Full screen width  presentation in pdf format    ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-05-panel-talk/paneltalk)    | [Main Talk](https://reader.tutors.dev/topic/reference-course/topic-05-panel-talk) | 
+| [Full screen width note](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-04-panel-note/panelnote)                               | [Main Note](https://reader.tutors.dev/topic/reference-course/topic-04-panel-note) | 
 
 
 ## Talk 
 
-A talk is a PDF presentation, document or other pdf formatted resource. The pdf file, markdown description and image file must all have the same file name, which can be whatever you choose. For example:
+A talk is a PDF presentation, document or other pdf formatted resource. The pdf file, markdown description and image file must all have the same file name, which can be whatever you choose. 
 
-![](img/talk.png)
+| Example Resource                                             | Display                                                      | Cards                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Standard presentation in pdf format](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/talk-1-intro) | [Lecture 1](https://reader.tutors.dev/talk/reference-course/topic-01-typical/unit-1/talk-1-intro) | [Talks](https://reader.tutors.dev/wall/talk/reference-course) |
+
+| File name        | Purpose                                                      |
+| ---------------- | ------------------------------------------------------------ |
+| introduction.md  | Title for the side bar The file can have any suitable name, but must be .md file type |
+| introduction.png | Image for card. File name must be same as .md file. File type can be .png, .jpg, or .jpeg |
+| Introduction.pdf | Pdf to be rendered if the card is selected.                  |
 
 The .md file provides the card title + subtitle:
-
-#### introduction.md
 
 ~~~markdown
 Lecture 1
@@ -209,23 +228,7 @@ Lecture 1
 A short summary of the talk, no more than two sentences.
 ~~~
 
-These will populate the card:
-
-![](img/card-1.png)
-
-... which will include the .png image provide
-
-Selecting the card will open the pdf in a reader, with an accompanying context panel on the right - called the Topic Navigator:
-
-![](img/talk-pdf.png)
-
-Slide next/prev + rotate, download and full screen buttons are included in the title bar.
-
-- [Talk Example](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/talk-1-intro)
-
 ## Web 
-
-
 
 ## Note 
 
