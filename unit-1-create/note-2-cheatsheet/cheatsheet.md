@@ -7,6 +7,7 @@ order:4
 [toc]
 
 ## Cards
+
 ---
 
 The card metaphor is used throughout tutors as a simple, effective visual to represent a variety of learning resources. In general the contents of a card are extracted from the following:
@@ -17,6 +18,8 @@ The card metaphor is used throughout tutors as a simple, effective visual to rep
 These resources are typically named to match your context, and are contained in a folder whose name is structured to encode the type of learning resource.
 
 ## Semantic Resource Names
+
+---
 
 ### Folders Names
 
@@ -74,6 +77,7 @@ The following filenames are reserved:
 | githubid        | link to github repo           |
 
 ## Course Structure
+
 ---
 
 The minimum requirements for a course are a folder containing these three files:
@@ -108,6 +112,7 @@ There are a range of other optional properties. See later in this document for a
 
 
 ## Topic
+
 ---
 
 Top level learning object for a course. Typically encapsulating a session or week of learning material.
@@ -133,6 +138,7 @@ Units with presentations, labs + resources
 In addition to the title, subtitle + image specified the file, the topic can contain any number of units (see below) or other learning objects.
 
 ## Unit
+
 ---
 
 A unit will encapsulate learning resources, framed by a title
@@ -156,6 +162,7 @@ Main Lesson
 Units contain any number of learning resources.
 
 ## Side
+
 ---
 
 A side will encapsulate learning resources, framed by a title
@@ -179,6 +186,7 @@ Labs for this Topic
 Side bar cam contain any number of learning resources.
 
 ## Learning Resources
+
 ---
 
 ### Types
