@@ -10,7 +10,7 @@ order:4
 
 Folders starting with the following names have a significance in Tutors:
 
-|  Example                                                                                     | Source | 
+|  Example                                                                                     | Source |
 | -------------------------------------------------------------------------------------------- | ------------------------------------------  |
 | [topic](https://reader.tutors.dev/topic/reference-course/topic-01-typical)                   | [Top level course topic ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical)|
 | [unit](https://reader.tutors.dev/topic/reference-course/topic-01-typical)                    | [Group of learning objects within a topic  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1)|
@@ -21,7 +21,7 @@ Folders starting with the following names have a significance in Tutors:
 | [note](https://reader.tutors.dev/note/reference-course/topic-01-typical/unit-2/note-1)       | [Single web page, authored in markdown ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/note-1)|
 | [panelvideo](https://reader.tutors.dev/topic/reference-course/topic-03-media)                | [A full screen width video, hosted in YouTube or HEANet](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-03-media/panelvideo-1)|
 | [paneltalk](https://reader.tutors.dev/topic/reference-course/topic-05-panel-talk)            | [Full screen width  presentation in pdf format    ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-05-panel-talk/paneltalk)|
-| [pnelnote](https://reader.tutors.dev/topic/reference-course/topic-04-panel-note)             | [ Full screen width note](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-04-panel-note/panelnote)|
+| [panelnote](https://reader.tutors.dev/topic/reference-course/topic-04-panel-note)            | [ Full screen width note](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-04-panel-note/panelnote)|
 | [talk](https://reader.tutors.dev/talk/reference-course/topic-01-typical/unit-1/talk-1-intro) | [Standard presentation in pdf format  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/talk-1-intro)|
 | [web](https://reader.tutors.dev/wall/web/reference-course.netlify.app)                       | [ Link to an external web site  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/web-1)|
 
@@ -56,6 +56,14 @@ For all file & folder names, avoid spaces within a file name.
 | topic-01-introduction  | Topic 01 Introduction
 | topic-02-learning-html | Topic 02 Learning HTML
 
+### File Names
+
+Each resource will typically have the following files:
+
+| File                   | Purpose                                                      |
+| ---------------------- | ------------------------------------------------------------ |
+| some-resource-name.md  | A markdown file, typically containing title + short summary for the resource |
+| some-resource-name.png | Image to he used for the resource. Name must be the same as the .md file, image can be .png, .jpg. .jpeg, .gif |
 
 ## Course Structure
 
@@ -97,14 +105,14 @@ Top level learning object for a course. Typically encapsulating a session or wee
 - [Example](https://reader.tutors.dev/topic/reference-course/topic-01-typical) 
 - [Source ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical)
 
-| File name      | Purpose      |  
-| -------------- | ------------ | 
-| topic-title.md      | Topic title + summary. Any file name, file type must be .md
-| topic-title.png     | Image for topic. File name must be same as .md file. File type can be .png, .jpg, or .jpeg
-
+| Files  | Purpose      |
+| -------------- | ------------ |
+| topic-title.md      | Topic title + summary. Any file name, file type must be .md file type |
+| topic-title.png     | Image for topic. File name must be same as .md file. File type can be .png, .jpg, or .jpeg|
 
 ### topic.md
-The title and subtitle are extracted from the topic.md file, for example:
+
+The title and subtitle are extracted from the .md file, for example:
 
 ~~~~markdown
 Simple
@@ -112,43 +120,68 @@ Simple
 Units with presentations, labs + resources
 ~~~~
 
-The image is contained in topic.png
+In addition to the title, subtitle + image specified the file, the topic can contain any number of units (see below) or other learning objects.
 
 ## Unit
 
-A unit will encapsulate learning resources, framed by a title:
+A unit will encapsulate learning resources, framed by a title
 
-![](img/unit.png)
+- [Example](https://reader.tutors.dev/topic/reference-course/topic-01-typical) 
+- [Source ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1)
 
-The above unit is laid out as follows:
+| Files          | Purpose                                                      |
+| -------------- | ------------------------------------------------------------ |
+| main-lesson.md | Title for the unit. The file can have any suitable name, but must be .md file type |
 
-![](img/unit-folder.png)
 
-Three learning objects (discussed below) + another topic.md file, which contains the unit title:
+The title is specified in a single markdown file:
 
-### topic.md
+### main-lesson.md
 
 ~~~markdown
 Main Lesson
 ~~~
+
+Units contain any number of learning resources.
+
+## Side
+
+A side will encapsulate learning resources, framed by a title
+
+- [Example](https://reader.tutors.dev/topic/reference-course/topic-02-side) 
+- [Source ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-02-side/side-unit)
+
+| File name     | Purpose                                                      |
+| ------------- | ------------------------------------------------------------ |
+| topic-labs.md | Title for the side bar The file can have any suitable name, but must be .md file type |
+
+
+The title is specified in a single markdown file
+
+### topic-labs.md
+
+~~~markdown
+Labs for this Topic
+~~~
+
+Side bar cam contain any number of learning resources.
 
 ## Learning Resources
 
 ### Types
 
 Tutors supports nine types learning resources: 
-
-| Type | Description  | 
-| ----------- | ------------------------------------------------------ |
-| talk        | Standard presentation in pdf format                    |
-| web         | Link to an external web site                           |
-| note        | Single web page, authored in markdown                  |
-| book        | Step by step lab instructions, authored in markdown    |
-| panelvideo  | A full screen width video, hosted in YouTube or HEANet |
-| paneltalk   | Full screen width  presentation in pdf format          |
-| panelnote   | Full screen width note                                 |
-| github      | Link to a GitHub repository                            |
-| archive     | Downloadable zip file of resources                     |
+| Example | Source  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [talk](https://reader.tutors.dev/talk/reference-course/topic-01-typical/unit-1/talk-1-intro) | [Standard presentation in pdf format  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/talk-1-intro) |
+| [note](https://reader.tutors.dev/note/reference-course/topic-01-typical/unit-2/note-1) | [Single web page, authored in markdown ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/note-1) |
+| [book](https://reader.tutors.dev/lab/reference-course/topic-01-typical/unit-1/book-a) | [Step by step lab instructions, authored in markdown  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/book-a) |
+| [panelvideo](https://reader.tutors.dev/topic/reference-course/topic-03-media) | [A full screen width video, hosted in YouTube or HEANet](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-03-media/panelvideo-1) |
+| [paneltalk](https://reader.tutors.dev/topic/reference-course/topic-05-panel-talk) | [Full screen width  presentation in pdf format    ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-05-panel-talk/paneltalk) |
+| [panelnote](https://reader.tutors.dev/topic/reference-course/topic-04-panel-note) | [ Full screen width note](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-04-panel-note/panelnote) |
+| [web](https://reader.tutors.dev/wall/web/reference-course.netlify.app) | [ Link to an external web site  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/web-1) |
+| [archive](https://reader.tutors.dev/wall/archive/reference-course) | [Downloadable zip file of resources  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-07-reference/archive) |
+| [github](https://reader.tutors.dev/wall/github/reference-course) | [Link to a GitHub repository  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical) |
 
 Each learning resource is contained within a folder, whose name starts with the name above, and may continue with additional sorting & semantic information. Eg:
 
@@ -157,30 +190,7 @@ Each learning resource is contained within a folder, whose name starts with the 
 
 The numerals imply alphabetic sorting of these 2 learning resources.
 
-### File Structure
-
-Each resource much have the following files:
-
-- some-resource-name.md
-- some-resource-name.png
-
-The name chosen for the markdown file must be also used for the .png. These provide essential information to populate a tutors card. For example this card:
-
-![](img/card-1.png)
-
 would require these two files:
-
-#### introduction.md
-
-~~~markdown
-Lecture 1
-
-A short summary of the talk, no more than two sentences.
-~~~
-
-#### introduction.png
-
-![](img/introduction.png)
 
 
 ## Talk 
