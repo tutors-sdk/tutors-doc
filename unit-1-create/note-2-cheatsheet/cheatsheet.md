@@ -120,10 +120,10 @@ Top level learning object for a course. Typically encapsulating a session or wee
 - [Example](https://reader.tutors.dev/topic/reference-course/topic-01-typical) 
 - [Source ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical)
 
-| Files  | Purpose      |
-| -------------- | ------------ |
-| topic-title.md      | Topic title + summary. Any file name, file type must be .md file type |
-| topic-title.png     | Image for topic. File name must be same as .md file. File type can be .png, .jpg, or .jpeg|
+| Files  | Purpose  |
+| --------------- | ------------ |
+| topic-title.md  | Topic title + summary. Any file name, file type must be .md file type |
+| topic-title.png | Image for topic. File name must be same as .md file. File type can be .png, .jpg, or .jpeg|
 
 ### topic.md
 
@@ -146,8 +146,8 @@ A unit will encapsulate learning resources, framed by a title
 - [Example](https://reader.tutors.dev/topic/reference-course/topic-01-typical) 
 - [Source ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1)
 
-| Files          | Purpose                                                      |
-| -------------- | ------------------------------------------------------------ |
+| Files          | Purpose |
+| -------------- | ------- |
 | main-lesson.md | Title for the unit. The file can have any suitable name, but must be .md file type |
 
 
@@ -170,8 +170,8 @@ A side will encapsulate learning resources, framed by a title
 - [Example](https://reader.tutors.dev/topic/reference-course/topic-02-side) 
 - [Source ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-02-side/side-unit)
 
-| File name     | Purpose                                                      |
-| ------------- | ------------------------------------------------------------ |
+| File name     | Purpose |
+| ------------- | ------- |
 | topic-labs.md | Title for the side bar The file can have any suitable name, but must be .md file type |
 
 
@@ -281,6 +281,7 @@ Similarity, if you wish to distributed a zipped archive of learning resources, i
 | [Step by step lab instructions, authored in markdown  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/book-a) | [Lab 1](https://reader.tutors.dev/lab/reference-course/topic-01-typical/unit-1/book-a) | [Labs](https://reader.tutors.dev/wall/lab/reference-course) |
 
 
+A series of steps/instructions, authored in Markdown.
 
 
 ## Web 
@@ -290,6 +291,8 @@ Similarity, if you wish to distributed a zipped archive of learning resources, i
 | Example Resource | Display | Cards |
 | ---------------- | ------- | ----- |
 | [Link to a web site  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/web-1) | [Web Site](https://tutors.dev) | [Web Links](https://reader.tutors.dev/web/talk/reference-course) |
+
+A simple link to an external web resource.
 
 | Resource   | Purpose  |
 | ---------- | -------- |
@@ -303,6 +306,8 @@ Similarity, if you wish to distributed a zipped archive of learning resources, i
 | ---------------- | ------- | ----- |
 | [Downloadable zip file of resources  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-07-reference/archive) | [Archive 1](https://reader.tutors.dev/wall/archive/reference-course) | [Archives](https://reader.tutors.dev/archive/talk/reference-course) |
 
+A link to a downloadable archive (zip). The archive is bundled with the course source and hosted with the course resources.
+
 | Resource   | Purpose  |
 | ---------- | -------- |
 | archvive.md  | Title + short summary for the archive. The file can have any suitable name, but must be .md file type |
@@ -314,6 +319,9 @@ Similarity, if you wish to distributed a zipped archive of learning resources, i
 | Example Resource | Display | Cards |
 | ---------------- | ------- | ----- |
 | [Link to a GitHub repository  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical) | [Github Repo 1](https://github.com/tutors-sdk/tutors) | [Repos](https://reader.tutors.dev/wall/repo/reference-course) | 
+
+
+A link to an GitHub repository.
 
 | Resource   | Purpose  |
 | ---------- | -------- |
