@@ -432,7 +432,92 @@ Links to external resources can be included with conventional web links.
 
 ## Videos
 
-## Laytex
+Panelvideos above are the primary mechanism for displaying videos prominently. However, most learnings objects can have videos associated with them by dropping in a single file into the Learning Resource folder called:
+
+- videoid
+
+Videos are usually hosted on Youtube - and you will need a link to the video in order to embed in a tutors course. A typical YouTube URL looks like this:
+
+~~~url
+https://www.youtube.com/watch?v=Hfw1lbErjws
+~~~
+
+You will typically use the video id:
+
+~~~
+Hfw1lbErjws
+~~~
+
+... which is the last string after the `v=`. This is the contents of the videoid file.
+
+However, this videoid file can be dropped into most Learningg Resources. If a resource has this file, then a video play button will feature in the Card for the resource, which will trigger the video player. 
+
+
+### Video Talks
+
+| Example Resource | Display | 
+| ---------------- | ------- | 
+| [Video Only Talk](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-03-media/unit-1/talk-3) | [Lecture 7]https://reader.tutors.dev/video/reference-course/topic-03-media/unit-1/talk-3/x09E7b2ESE8?start=1068&1370) | 
+
+For Talk resources only, it is possible to drop the PDF completely and just include the video only. The card will display as with a PDF 
+
+
+
+### Video Chapters
+
+| Example Resource | Display | 
+| ---------------- | ------- | 
+| [Video Chapter]](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-03-media/unit-1/talk-2)| [Lecture 6](https://reader.tutors.dev/video/reference-course/topic-03-media/unit-1/talk-2/x09E7b2ESE8?start=106&286)) | 
+
+
+Youtube supports start/end times when linking to a video. This is via appending a start/end in seconds to the video id:
+
+~~~bash
+x09E7b2ESE8?start=106&286
+~~~
+
+On youtube, this typically works best if the Youtube description also contains chapter information. Of example, on YouTube Studio, chapters information can be included by inforporating start / end times into the video description. For example:
+
+~~~bash
+Introduction 00:00:00
+Svelte Core Concepts 00:02:54
+Svelte Components 0:19:49
+Donation App 00:27:55
+Donation-Hapi V1 00:34:24
+~~~
+
+For the above, the associated videoid files for each chapter would look like this:
+
+~~~bash
+9Srf_ydMdL0?start=0&174
+9Srf_ydMdL0?start=174&1189
+9Srf_ydMdL0?start=1189&1675
+9Srf_ydMdL0?start=1675&2064
+9Srf_ydMdL0?start=2064&6348
+~~~
+
+### HEANet hosted videos
+
+If you require an alternative to Youtube, Tutors support videos hosted on the HEANet media service:
+
+- <https://media.heanet.ie/>
+
+If you wish to use this service, then your videoid file should look like this:
+
+~~~bash
+heanet=7e4f1e9afedb40d5996d0703702eaaa4
+~~~
+
+The id will be generated when you upload the video to the HEAnet media service.
+
+Example here :
+
+- <https://tutors-next.netlify.app/topic/tutors-video-test.netlify.app/topic-02-heanet>
+
+The cover for the video will be the image associated with your topic or card.
+
+
+## Latex
 
 ## Ordering Learning Resources
 
