@@ -10,7 +10,7 @@ order:4
 
 ---
 
-The card metaphor is used throughout tutors as a simple, effective visual to represent a variety of learning resources. In general the contents of a card are extracted from the following:
+The card metaphor is used throughout tutors as a simple, effective visual feature to represent a variety of learning resources. In general the contents of a card are extracted from the following:
 
 - A Markdown file, containing resource name + summary
 - An image, in png, jpg, gif or svg formats.
@@ -40,7 +40,7 @@ Folder names convey the type of learning resource, with the first letters determ
 | [talk](https://reader.tutors.dev/talk/reference-course/topic-01-typical/unit-1/talk-1-intro) | [Standard presentation in pdf format  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/talk-1-intro)|
 | [web](https://reader.tutors.dev/wall/web/reference-course.netlify.app)                       | [ Link to an external web site  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/web-1)|
 
- To sort the name alphabetically, append numerals. To enhance meaning, append contextual keywords: For example:
+ To sort the name alphabetically, append numerals. To enhance meaning, append contextual keywords. For example:
 
 | Folder Name            |
 | ---------------------- |
@@ -165,7 +165,7 @@ Units contain any number of learning resources.
 
 ---
 
-A side will encapsulate learning resources, framed by a title
+A side will encapsulate learning resources, framed by a title. It is equivalent to a Unit (see above), but framed within a side bar.
 
 - [Example](https://reader.tutors.dev/topic/reference-course/topic-02-side) 
 - [Source ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-02-side/side-unit)
@@ -198,7 +198,7 @@ There are 2 broad types of learning resources
 
 ### Card Resources
 
-These resources are represented by simple cards that can appear in a topic unit:
+These resources are represented by simple cards that can appear in a topic or unit:
 
 | Example Resource | Display | Cards |
 | ---------------- | ------- | ----- |
@@ -211,7 +211,7 @@ These resources are represented by simple cards that can appear in a topic unit:
 
 ### Panel Resources
 
-Panels appear directly in a unit or topic, and are not represented by a separate card
+Panels appear directly in a unit or topic, and are not represented by a separate card. Instead, their contents are rendered directly on to the parent topic/unit.
 
 | Example Resource | Display | 
 | ---------------- | ------- | 
@@ -222,6 +222,7 @@ Panels appear directly in a unit or topic, and are not represented by a separate
 ## Talk 
 
 ---
+
 | Example Resource | Display | Cards |
 | ---------------- | ------- | ----- |
 | [Standard presentation in pdf format](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/talk-1-intro) | [Lecture 1](https://reader.tutors.dev/talk/reference-course/topic-01-typical/unit-1/talk-1-intro) | [Talks](https://reader.tutors.dev/wall/talk/reference-course) |
@@ -233,7 +234,7 @@ A talk is a PDF presentation, document or other pdf formatted resource. The pdf 
 | ---------------- | ------------------------------------------------------------ |
 | introduction.md  | Title + short summary for the talk. The file can have any suitable name, but must be .md file type |
 | introduction.png | Image for card. File name must be same as .md file. File type can be .png, .jpg, or .jpeg |
-| Introduction.pdf | Pdf to be rendered if the card is selected.                  |
+| introduction.pdf | Pdf to be rendered if the card is selected. The name must match the .md file name precicely |
 
 The .md file provides the card title + subtitle:
 
@@ -259,18 +260,22 @@ If you choose to include images or links to zipped archives you wish to be distr
 
 | Resource   | Purpose  |
 | ---------- | -------- |
-| note-1.md  | The content of the note. Any suitable name, must be .md |
-| note-1.png | Image for card. File name must be same as .md file. File type can be .png, .jpg, or .jpeg |
+| note.md    | The content of the note. Any suitable name, type must be .md |
+| note.png   | Image for card. File name must be same as .md file. File type can be .png, .jpg, or .jpeg |
 | img        | A folder containing Images used by the note |
 | archives   | A folder contains any zipped archives referred to in the note |
 
-Image links structure in include relative references to the image. E.g:
+
+Image links can be structured in include relative references to the image. E.g:
 
 ![](img/img-link.png)
 
-Similarity, if you wish to distributed a zipped archive of learning resources, include the zip file(s) in the archives folder, and link like this:
+The linked images must be included in the img folder in the note resource. Similairly, if you wish to distributed a zipped archive of learning resources, include the zip file(s) in the archives folder, and link like this:
 
 ![](img/zip-link.png)
+
+Links to external resources can be included with conventional web links.
+
 
 ## Book 
 
@@ -281,8 +286,45 @@ Similarity, if you wish to distributed a zipped archive of learning resources, i
 | [Step by step lab instructions, authored in markdown  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/book-a) | [Lab 1](https://reader.tutors.dev/lab/reference-course/topic-01-typical/unit-1/book-a) | [Labs](https://reader.tutors.dev/wall/lab/reference-course) |
 
 
-A series of steps/instructions, authored in Markdown.
+A series of steps/instructions, authored in Markdown, authored in markdown using the basic syntax:
 
+- <https://www.markdownguide.org/basic-syntax/>
+
+
+Each step in the lab is held in a separate markdown file. The step will have a full title, extracted from the first line of the step file. It will also have a short title, used for constrained (mobile) screen widths.
+
+The step files are named with three dot separated segments as follows:
+
+- [sort-key].[short-title].md
+
+Where:
+
+- [sort-key] ensures the step sequential position, sorted alphabetically/numerically. Typlicaly you might use a sequence like: 01, 02, 03, 04 etc...
+- [short-titie] is a title used for constrained screen widths
+
+For example:
+
+- 00.Lab-01.md
+- 01.01.md
+- 02.02.md
+- 03.03.md
+
+The title for the lab card is extracted from the short title for the first step. In the above example, the lab navigation side bar would be:
+
+- Lab-01
+- 01
+- 02
+- 03
+
+Image links can be structured in include relative references to the image. E.g:
+
+![](img/img-link.png)
+
+The linked images must be included in the img folder in the lab. Similairly, if you wish to distributed a zipped archive of learning resources, include the zip file(s) in the archives folder, and link like this:
+
+![](img/zip-link.png)
+
+Links to external resources can be included with conventional web links.
 
 ## Web 
 
@@ -335,17 +377,62 @@ A link to an GitHub repository.
 | ---------------- | ------- | 
 | [A full screen width video, hosted in YouTube or HEANet](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-03-media/panelvideo-1) | [Main Video](https://reader.tutors.dev/topic/reference-course/topic-03-media) |
 
+A video to be displayed directly on the topic or unit resource.
+
+| Resource   | Purpose  |
+| ---------- | -------- |
+| video.md   | Title for the video. The file can have any suitable name, but must be .md file type |
+| videoid    | id of the video |
+
+See video section below for format of this id.
+
 ## Paneltalk 
 
 | Example Resource | Display | 
 | ---------------- | ------- | 
 | [Full screen width  presentation in pdf format    ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-05-panel-talk/paneltalk) | [Main Talk](https://reader.tutors.dev/topic/reference-course/topic-05-panel-talk) | 
 
+A PDF document to be displayed directly on the topic or unit resource.
+
+| Resource   | Purpose  |
+| ---------- | -------- |
+| talk.md   | Title for the document. The file can have any suitable name, but must be .md file type |
+| talk.pdf  | The .PDF to display. Its name must be the same as the .md file |
+
+
 ## Panelnote 
 
 | Example Resource | Display | 
 | ---------------- | ------- | 
 | [Full screen width note](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-04-panel-note/panelnote) | [Main Note](https://reader.tutors.dev/topic/reference-course/topic-04-panel-note) | 
+
+A panel note is a full web page, authored in markdown using the basic syntax:
+
+- <https://www.markdownguide.org/basic-syntax/>
+
+The note's contents is rendered directly onto the parent topic or unit.
+
+| Resource   | Purpose  |
+| ---------- | -------- |
+| note.md    | The content of the note. Any suitable name, type must be .md |
+| img        | A folder containing Images used by the note |
+| archives   | A folder contains any zipped archives referred to in the note |
+
+
+Image links can be structured in include relative references to the image. E.g:
+
+![](img/img-link.png)
+
+The linked images must be included in the img folder in the note resource. Similairly, if you wish to distributed a zipped archive of learning resources, include the zip file(s) in the archives folder, and link like this:
+
+![](img/zip-link.png)
+
+Links to external resources can be included with conventional web links.
+
+
+## Videos
+
+## Laytex
 
 ## Ordering Learning Resources
 
