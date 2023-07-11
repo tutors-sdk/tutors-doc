@@ -525,9 +525,9 @@ The cover for the video will be the image associated with your topic or card.
 
 ## Properties.yaml
 
-## Calendar.yaml
+### Calendar.yaml
 
-## Enrollment.yaml
+### Enrollment.yaml
 
 ## Makrdown Guides
 
