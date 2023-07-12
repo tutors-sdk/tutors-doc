@@ -10,7 +10,7 @@ order:4
 
 ---
 
-The card metaphor is used throughout tutors as a simple, effective visual feature to represent a variety of learning resources. In general the contents of a card are extracted from the following:
+The card metaphor is used throughout tutors as a simple visual feature to represent a variety of learning resources. In general the contents of a card are extracted from the following:
 
 - A Markdown file, containing resource name + summary
 - An image, in png, jpg, gif or svg formats.
@@ -36,11 +36,11 @@ Folder names convey the type of learning resource, with the first letters determ
 | [note](https://reader.tutors.dev/note/reference-course/topic-01-typical/unit-2/note-1)       | [Single web page, authored in markdown ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/note-1)|
 | [panelvideo](https://reader.tutors.dev/topic/reference-course/topic-03-media)                | [A full screen width video, hosted in YouTube or HEANet](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-03-media/panelvideo-1)|
 | [paneltalk](https://reader.tutors.dev/topic/reference-course/topic-05-panel-talk)            | [Full screen width  presentation in pdf format    ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-05-panel-talk/paneltalk)|
-| [panelnote](https://reader.tutors.dev/topic/reference-course/topic-04-panel-note)            | [ Full screen width note](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-04-panel-note/panelnote)|
+| [panelnote](https://reader.tutors.dev/topic/reference-course/topic-04-panel-note)            | [Full screen width note](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-04-panel-note/panelnote) |
 | [talk](https://reader.tutors.dev/talk/reference-course/topic-01-typical/unit-1/talk-1-intro) | [Standard presentation in pdf format  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1/talk-1-intro)|
-| [web](https://reader.tutors.dev/wall/web/reference-course.netlify.app)                       | [ Link to an external web site  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/web-1)|
+| [web](https://reader.tutors.dev/wall/web/reference-course.netlify.app)                       | [Link to an external web site  ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-2/web-1) |
 
- To sort the name alphabetically, append numerals. To enhance meaning, append contextual keywords. For example:
+ To sort the name alphabetically you may append numerals. To enhance meaning, append contextual keywords. For example:
 
 | Folder Name            |
 | ---------------------- |
@@ -80,6 +80,10 @@ The following filenames are reserved:
 
 ---
 
+| Example Resource | Display | 
+| ---------------- | ------- | 
+| [reference-course](https://github.com/tutors-sdk/tutors-reference-course) | [Reference Course](https://reader.tutors.dev/course/reference-course) |
+
 The minimum requirements for a course are a folder containing these three files:
 
 | File name      | Purpose      |  
@@ -115,10 +119,12 @@ There are a range of other optional properties. See later in this document for a
 
 ---
 
+| Example Resource | Display | 
+| ---------------- | ------- | 
+| [topic-01-typical](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical) | [Typical Topic](https://reader.tutors.dev/topic/reference-course/topic-01-typical) |
+
 Top level learning object for a course. Typically encapsulating a session or week of learning material.
 
-- [Example](https://reader.tutors.dev/topic/reference-course/topic-01-typical) 
-- [Source ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical)
 
 | Files  | Purpose  |
 | --------------- | ------------ |
@@ -141,10 +147,12 @@ In addition to the title, subtitle + image specified the file, the topic can con
 
 ---
 
-A unit will encapsulate learning resources, framed by a title
 
-- [Example](https://reader.tutors.dev/topic/reference-course/topic-01-typical) 
-- [Source ](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1)
+| Example Resource | Display | 
+| ---------------- | ------- | 
+| [unit-1](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-01-typical/unit-1) | [Main Lesson](https://reader.tutors.dev/topic/reference-course/topic-01-typical) |
+
+A unit will encapsulate learning resources, framed by a title
 
 | Files          | Purpose |
 | -------------- | ------- |
@@ -164,6 +172,10 @@ Units contain any number of learning resources.
 ## Side
 
 ---
+
+| Example Resource | Display | 
+| ---------------- | ------- | 
+| [side-unit](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-02-side/side-unit) | [Labs for this Topic](https://reader.tutors.dev/topic/reference-course/topic-02-side) |
 
 A side will encapsulate learning resources, framed by a title. It is equivalent to a Unit (see above), but framed within a side bar.
 
@@ -634,7 +646,7 @@ icon :
   type: fa-solid:code-branch
   color: FFD601
 ~~~
- 
+
 This icon is drawn from this resource on Iconfy:
 
 - <https://icon-sets.iconify.design/fa-solid/code-branch/>
@@ -730,9 +742,7 @@ With this enabled, then entering a topic will trigger an authentication event. U
 - Tutors Live: This will show a card for each user currently logged in. It will take approx 1 minute to 'warm up' - and then as users come and go to the course web cards will appear and disappear. Students might use this to get in touch which whomsoever is currently online. The card for each student will display useful context information concerning the current activity of the student:
 
 
-### Calendar.yaml
-
-# Calendar
+### Calendar
 
 You may choose to prominently display an academic calendar - with the current week number highlighted. To set it up, include a file called `calendar.yaml` into your course folder. Here is an example:
 
@@ -819,9 +829,6 @@ Some images you mau choose to use may be hi-resolution, appearing to be super si
 - <https://nodeca.github.io/pica/demo>
 
 Allows you to resize the image to a suitable 'canvas' size.
-
-## Publish on Netlify
-
 
 
 ## Reference Course
