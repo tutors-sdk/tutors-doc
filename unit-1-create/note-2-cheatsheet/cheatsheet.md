@@ -498,6 +498,12 @@ For the above, the associated videoid files for each chapter would look like thi
 
 ### HEANet hosted videos
 
+### Video Chapters
+
+| Example Resource | Display | 
+| ---------------- | ------- | 
+| [Heanet Video]](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-03-media/unit-2-heanet)| [HeaNet video example](https://reader.tutors.dev/topic/reference-course/topic-03-media)) | 
+
 If you require an alternative to Youtube, Tutors support videos hosted on the HEANet media service:
 
 - <https://media.heanet.ie/>
@@ -510,20 +516,120 @@ heanet=7e4f1e9afedb40d5996d0703702eaaa4
 
 The id will be generated when you upload the video to the HEAnet media service.
 
-Example here :
-
-- <https://tutors-next.netlify.app/topic/tutors-video-test.netlify.app/topic-02-heanet>
-
-The cover for the video will be the image associated with your topic or card.
-
 
 ## Latex
 
 ## Ordering Learning Resources
 
-## Using SVG Icons
+| Example Resource | Display | 
+| ---------------- | ------- | 
+| [Ordering](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-08-ordering)| [Ordering Example](https://reader.tutors.dev/topic/reference-course/topic-08-ordering) | 
+
+For a topic, unit or side resources, the ordering of the cards is as follows:
+
+- talk
+- lab
+- note
+- web
+- github
+- archive
+
+This can be customised via the introduction of [FrontMatter](https://docs.zettlr.com/en/core/yaml-frontmatter/) sections in the corresponding markdown files. This should contain an "order" number, which dictates the sequenceing for the cards.
+
+~~~yaml
+---
+order: 1
+---
+~~~
+
+If the resouce is a Lab, then the first step should include the FrontMatter/order paramater.
+
+## SVG Icons
+
+| Example Resource | Display | 
+| ---------------- | ------- | 
+| [Icon based cards]](https://reader.tutors.dev/topic/reference-course/topic-09-svg)| [Iconify](https://github.com/tutors-sdk/tutors-reference-course/tree/main/topic-09-svg) | 
+
+If no image file is found in a resource, then Tutors will look to display an SVG Icon instead. This Icon is drawn from the Iconify collection:
+
+- <https://icon-sets.iconify.design/>
+
+You can search for an icon in that collection, locate the reference and include this + a colour in a [FrontMatter](https://docs.zettlr.com/en/core/yaml-frontmatter/) section for the Learning Resource. For example:
+
+~~~markdown
+---
+icon:
+  type: vscode-icons:file-type-pdf2
+---
+~~~
+
+The above icon is drawn from this resource:
+
+- <https://icon-sets.iconify.design/vscode-icons/file-type-pdf2/>
+
+For monochrome icons, you can also specify the icon colour:
+
+~~~markdown
+---
+icon:
+  type: bi:filetype-pptx
+  color: green
+---
+~~~
+
 
 ## Properties.yaml
+
+This is a [YAML formatted](https://circleci.com/blog/what-is-yaml-a-beginner-s-guide/) file containing course-wide parameters. It defines the following aspects:
+
+- Course attribution/credit
+- Course Parent
+- Course Companion Sites
+- The Course Icon
+- Topic show/hide settings for instructors (including PIN)
+- Authentication + TutorsTime & TutorsLive
+- Global video hide
+- Global Lab Autonumbering
+
+In addition, two (optional) supporting files :
+
+- calendar.yaml
+- enrolment.yaml
+
+allow additional aspects to be specified.
+
+
+### Course attribution/credit
+
+
+### Course Parent
+
+### Course Companion Sites
+
+The companions toolbar hosts a set of links to external services:
+
+![](img/01.png)
+
+In the above we have:
+
+- Slack Channel
+- Moodle Course Web
+- Youtube Playlist/Channel
+
+~~~md
+slack          : https://wit-hdip-comp-sci-21.slack.com/archives/C01G8QWFC4F
+moodle         : https://moodle.wit.ie/course/view.php?id=176625
+youtube        : https://www.youtube.com/playlist?list=PLEuhMaR29LyDMF2m4kSS9gVRCuimgo3GU
+~~~
+
+We can also have a Zoom link if appropriate.
+
+~~~md
+zoom         : https://wit-ie.zoom.us/j/96265735671
+~~~
+
+You may choose to have a single companion, or none as approprioate
+
 
 ### Calendar.yaml
 
