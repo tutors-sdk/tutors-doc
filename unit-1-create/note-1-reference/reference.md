@@ -4,7 +4,7 @@ order: 4
 
 # Tutors Reference
 
-[toc]
+[[toc]]
 
 ## Cards
 
